@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_country_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Country Name"
+            android:textSize="28sp"
+            android:fontFamily="@font/quicksand"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Cases"
+            android:textSize="22sp"
+            android:fontFamily="@font/quicksand"/>
+            />
+        <View
+            android:background="#000"
+            android:layout_height="0.5dp"
+            android:layout_gravity="center"
+            android:layout_width="40dp"/>
+
+        <TextView
+            android:id="@+id/tv_cases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Total Cases"
+            android:textSize="18sp"
+            android:fontFamily="@font/quicksand"/>
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Deaths"
+            android:textSize="22sp"
+            android:fontFamily="@font/quicksand"/>
+        />
+        <View
+            android:background="#000"
+            android:layout_height="0.5dp"
+            android:layout_gravity="center"
+            android:layout_width="50dp"/>
+
+        <TextView
+            android:id="@+id/tv_deaths"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Total Deaths"
+            android:textSize="18sp"
+            android:fontFamily="@font/quicksand"/>
+        />
+
+        <View
+            android:background="#000"
+            android:layout_height="0.5dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+</layout>
