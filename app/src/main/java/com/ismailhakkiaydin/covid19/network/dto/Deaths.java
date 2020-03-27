@@ -1,9 +1,12 @@
 package com.ismailhakkiaydin.covid19.network.dto;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Deaths {
+public class Deaths implements Parcelable {
 
     @SerializedName("new")
     private String _new;
@@ -26,4 +29,34 @@ public class Deaths {
         this.total = total;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this._new);
+        dest.writeValue(this.total);
+    }
+
+    public Deaths() {
+    }
+
+    protected Deaths(Parcel in) {
+        this._new = in.readString();
+        this.total = (Integer) in.readValue(Integer.class.getClassLoader());
+    }
+
+    public static final Parcelable.Creator<Deaths> CREATOR = new Parcelable.Creator<Deaths>() {
+        @Override
+        public Deaths createFromParcel(Parcel source) {
+            return new Deaths(source);
+        }
+
+        @Override
+        public Deaths[] newArray(int size) {
+            return new Deaths[size];
+        }
+    };
 }

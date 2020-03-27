@@ -3,7 +3,7 @@
 
     <data>
         <variable
-            name="country"
+            name="detail"
             type="com.ismailhakkiaydin.covid19.network.dto.Country" />
     </data>
 
@@ -13,62 +13,108 @@
         android:orientation="vertical"
         android:paddingTop="8dp">
 
+
+
         <TextView
             android:id="@+id/tv_country_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@{country.country}"
+            android:text="@{detail.country}"
             android:textSize="28sp"
             android:fontFamily="@font/quicksand"/>
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Cases"
-            android:textSize="22sp"
-            android:fontFamily="@font/quicksand"/>
-            />
-        <View
-            android:background="#000"
-            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Cases"
+                    android:textColor="@color/colorCases"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/quicksand"/>
+                />
+                <View
+                    android:background="#000"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="center"
+                    android:layout_width="40dp"/>
+
+                <TextView
+                    android:id="@+id/tv_cases"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@{String.valueOf(detail.cases.total)}"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/quicksand"/>
+                />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Deaths"
+                    android:textColor="@color/colorDeaths"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/quicksand"/>
+                />
+                <View
+                    android:background="#000"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="center"
+                    android:layout_width="50dp"/>
+
+                <TextView
+                    android:id="@+id/tv_deaths"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@{String.valueOf(detail.deaths.total)}"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/quicksand"/>
+                />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
             android:layout_gravity="center"
-            android:layout_width="40dp"/>
-
+            android:text="Last Updated"
+            android:textSize="10sp"/>
         <TextView
-            android:id="@+id/tv_cases"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@{country.cases.total}"
-            android:textSize="18sp"
-            android:fontFamily="@font/quicksand"/>
-        />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Deaths"
-            android:textSize="22sp"
-            android:fontFamily="@font/quicksand"/>
-        />
-        <View
-            android:background="#000"
-            android:layout_height="0.5dp"
             android:layout_gravity="center"
-            android:layout_width="50dp"/>
-
-        <TextView
-            android:id="@+id/tv_deaths"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@{country.deaths.total}"
-            android:textSize="18sp"
-            android:fontFamily="@font/quicksand"/>
-        />
+            android:text="@{detail.time}"
+            android:textSize="8sp"/>
 
         <View
             android:background="#000"

@@ -31,8 +31,8 @@ public class CountryRepository {
             @Override
             public void onResponse(Call<CountryResponse> call, Response<CountryResponse> response) {
                 CountryResponse countryResponse = response.body();
-                mCountryList = countryResponse.getCountryList();
-                mutableLiveData.setValue(mCountryList);
+                    mCountryList = countryResponse.getCountryList();
+                    mutableLiveData.setValue(mCountryList);
             }
 
             @Override

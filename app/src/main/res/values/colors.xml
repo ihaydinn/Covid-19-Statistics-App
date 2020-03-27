@@ -3,4 +3,12 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="colorCases">#FF9800</color>
+    <color name="colorDeaths">#D80F00</color>
+    <color name="colorRecovered">#4CAF50</color>
+    <color name="colorCritical">#9E0D03</color>
+    <color name="colorNew">#66B7FA</color>
+
+
 </resources>

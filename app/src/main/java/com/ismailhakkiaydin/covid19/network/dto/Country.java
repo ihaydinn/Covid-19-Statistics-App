@@ -1,9 +1,12 @@
 package com.ismailhakkiaydin.covid19.network.dto;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Country {
+public class Country implements Parcelable {
 
     @SerializedName("country")
     private String country;
@@ -56,4 +59,40 @@ public class Country {
         this.time = time;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.country);
+        dest.writeParcelable(this.cases, flags);
+        dest.writeParcelable(this.deaths, flags);
+        dest.writeString(this.day);
+        dest.writeString(this.time);
+    }
+
+    public Country() {
+    }
+
+    protected Country(Parcel in) {
+        this.country = in.readString();
+        this.cases = in.readParcelable(Cases.class.getClassLoader());
+        this.deaths = in.readParcelable(Deaths.class.getClassLoader());
+        this.day = in.readString();
+        this.time = in.readString();
+    }
+
+    public static final Parcelable.Creator<Country> CREATOR = new Parcelable.Creator<Country>() {
+        @Override
+        public Country createFromParcel(Parcel source) {
+            return new Country(source);
+        }
+
+        @Override
+        public Country[] newArray(int size) {
+            return new Country[size];
+        }
+    };
 }

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="country"
+            type="com.ismailhakkiaydin.covid19.network.dto.Country"/>
+
+    </data>
+
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:text="@{country.country}"
+          android:textSize="26sp"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:layout_gravity="center"
+          android:textColor="@color/colorCases"
+          android:text="Cases"
+          android:textSize="22sp"/>
+      <View
+          android:background="#000"
+          android:layout_height="0.5dp"
+          android:layout_gravity="center"
+          android:layout_width="50dp"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:text="New"
+          android:textColor="@color/colorNew"
+          android:textSize="18sp"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:text="@{country.cases.new}"
+          android:textSize="16sp"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:textColor="@color/colorCases"
+          android:text="Active"
+          android:textSize="18sp"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:text="@{String.valueOf(country.cases.active)}"
+          android:textSize="16sp"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:textColor="@color/colorCritical"
+          android:text="Critical"
+          android:textSize="18sp"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:text="@{String.valueOf(country.cases.critical)}"
+          android:textSize="16sp"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:textColor="@color/colorRecovered"
+          android:text="Recovered"
+          android:textSize="18sp"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:text="@{String.valueOf(country.cases.recovered)}"
+          android:textSize="16sp"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:textColor="@color/colorCritical"
+          android:text="TOTAL"
+          android:textSize="18sp"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:text="@{String.valueOf(country.cases.total)}"
+          android:textSize="16sp"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:layout_gravity="center"
+          android:textColor="@color/colorDeaths"
+          android:text="Deaths"
+          android:textSize="22sp"/>
+
+      <View
+          android:background="#000"
+          android:layout_height="0.5dp"
+          android:layout_gravity="center"
+          android:layout_width="50dp"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:textColor="@color/colorNew"
+          android:text="New"
+          android:textSize="18sp"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:text="@{country.deaths.new}"
+          android:textSize="16sp"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:text="TOTAL"
+          android:textColor="@color/colorCritical"
+          android:textSize="18sp"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:text="@{String.valueOf(country.deaths.total)}"
+          android:textSize="16sp"/>
+
+
+
+  </LinearLayout>
+
+
+
+</layout>
