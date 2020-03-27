@@ -1,4 +1,4 @@
-package com.ismailhakkiaydin.covid19;
+package com.ismailhakkiaydin.covid19.ui.splash;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -10,7 +10,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ismailhakkiaydin.covid19.R;
 import com.ismailhakkiaydin.covid19.databinding.ActivitySplashScreenBinding;
+import com.ismailhakkiaydin.covid19.ui.main.MainActivity;
 
 public class SplashScreenActivity extends AppCompatActivity {
 

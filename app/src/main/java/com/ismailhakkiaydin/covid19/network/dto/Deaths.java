@@ -6,10 +6,8 @@ import com.google.gson.annotations.SerializedName;
 public class Deaths {
 
     @SerializedName("new")
-    @Expose
     private String _new;
     @SerializedName("total")
-    @Expose
     private Integer total;
 
     public String getNew() {

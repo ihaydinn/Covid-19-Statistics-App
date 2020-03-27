@@ -6,19 +6,14 @@ import com.google.gson.annotations.SerializedName;
 public class Country {
 
     @SerializedName("country")
-    @Expose
     private String country;
     @SerializedName("cases")
-    @Expose
     private Cases cases;
     @SerializedName("deaths")
-    @Expose
     private Deaths deaths;
     @SerializedName("day")
-    @Expose
     private String day;
     @SerializedName("time")
-    @Expose
     private String time;
 
     public String getCountry() {
