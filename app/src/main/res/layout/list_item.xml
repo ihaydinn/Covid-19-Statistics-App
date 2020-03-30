@@ -13,8 +13,6 @@
         android:orientation="vertical"
         android:paddingTop="8dp">
 
-
-
         <TextView
             android:id="@+id/tv_country_name"
             android:layout_width="match_parent"
@@ -115,6 +113,15 @@
             android:layout_gravity="center"
             android:text="@{detail.time}"
             android:textSize="8sp"/>
+
+        <ImageView
+            android:id="@+id/img_followed_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@drawable/ic_star"
+            android:layout_gravity="center"/>
+
 
         <View
             android:background="#000"
