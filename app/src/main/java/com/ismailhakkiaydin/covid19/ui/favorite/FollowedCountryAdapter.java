@@ -34,6 +34,7 @@ public class FollowedCountryAdapter extends RecyclerView.Adapter<FollowedCountry
         return followedCountryViewHolder;
     }
 
+    
     @Override
     public void onBindViewHolder(@NonNull FollowedCountryViewHolder holder, int position) {
         Country country = listFollowedCountries.get(position);
